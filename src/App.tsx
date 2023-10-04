@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import Redirect from "./components/Redirect";
-import Connections from "./workspaces/Connections";
+// import Connections from "./workspaces/Connections";
 import DataExplorer from "./workspaces/DataExplorer";
 import GraphExplorer from "./workspaces/GraphExplorer";
 

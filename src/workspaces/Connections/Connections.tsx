@@ -19,18 +19,10 @@ import AvailableConnections from "../../modules/AvailableConnections";
 import ConnectionDetail from "../../modules/ConnectionDetail";
 import TopBarWithLogo from "../common/TopBarWithLogo";
 import defaultStyles from "./Connections.styles";
-// import { Box } from '@mui/material';//added
-// import { BarWave } from "react-cssfx-loading";//added
 
 export type ConnectionsProps = {
   classNamePrefix?: string;
 };
-
-// const renderLoadingMessage = () => (
-//   <Box position="absolute" top="49%" left="48%" transform="translate(-50%, -50%)">
-//     <BarWave color="#42335b" />
-//   </Box>
-// );
 
 const Connections = ({ classNamePrefix = "ft" }: ConnectionsProps) => {
   const styleWithTheme = useWithTheme();
@@ -41,10 +33,7 @@ const Connections = ({ classNamePrefix = "ft" }: ConnectionsProps) => {
   const configuration = useRecoilValue(configurationAtom);
   const [isModalOpen, setModal] = useState(configuration.size === 0);
   const [isSyncing, setSyncing] = useState(false);
-  const [screenState, setScreenState] = useState()
 
-  // Everytime that the active connection changes,
-  // if it was not synchronized yet, try to sync it
   const updateSchema = useSchemaSync(setSyncing);
   useEffect(() => {
     if (config?.schema?.triedToSync === true) {

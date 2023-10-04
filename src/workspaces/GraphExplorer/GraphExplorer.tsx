@@ -42,6 +42,7 @@ import NodeExpand from "../../modules/NodeExpand";
 import NodesStyling from "../../modules/NodesStyling/NodesStyling";
 import TopBarWithLogo from "../common/TopBarWithLogo";
 import defaultStyles from "./GraphExplorer.styles";
+import SetConnections from "../SetConnections";
 
 export type GraphViewProps = {
   classNamePrefix?: string;
@@ -186,6 +187,7 @@ const GraphExplorer = ({ classNamePrefix = "ft" }: GraphViewProps) => {
       <TopBarWithLogo>
         <Workspace.TopBar.Title>
           <div>
+          <SetConnections />
             <div className={pfx("top-bar-title")}>GRC Knowledge Graph</div>
             <div className={pfx("top-bar-subtitle")}>
               Active connection: {config?.displayLabel || config?.id}
