@@ -3,10 +3,11 @@ const https = require('https');
 const fs = require('fs');
 const path = require('path');
 const app = express();
-const port = 5173;
+const MetaData = require('../MetaData.json')
+const port = MetaData.Port.GraphExplorerPort ;
 const serverOptions = {
-    key: fs.readFileSync('./server.key'),
-    cert: fs.readFileSync('./server.crt')
+    key: fs.readFileSync(MetaData.SSL.SSL_Key),
+    cert: fs.readFileSync(MetaData.SSL.SSL_Certificate)
 };
 app.use(express.static(path.join(__dirname, 'dist')));
 
