@@ -18,5 +18,5 @@ app.get('*', (req, res) => {
 const server = https.createServer(serverOptions, app);
 
 server.listen(port, () => {
-    console.log(`Server running on port ${port}`);
+    console.log(`GraphExplorer Server running on port ${port}`);
 });
