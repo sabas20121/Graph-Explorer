@@ -219,7 +219,7 @@ const GraphExplorer = ({ classNamePrefix = "ft" }: GraphViewProps) => {
             onPress={toggleView("table-view")}
           />
           <div className={pfx("v-divider")} />
-          {/* <Link to={"/connections"}>
+           <Link to={"/connections"}>
             <Button
               className={pfx("button")}
               icon={<DatabaseIcon />}
@@ -227,7 +227,7 @@ const GraphExplorer = ({ classNamePrefix = "ft" }: GraphViewProps) => {
             >
               Open Connections
             </Button>
-          </Link> */}
+          </Link>
         </Workspace.TopBar.AdditionalControls>
       </TopBarWithLogo>
 
